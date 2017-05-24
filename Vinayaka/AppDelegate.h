@@ -16,7 +16,11 @@
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
 - (void)saveContext;
+@property(strong,nonatomic) UITabBarController *tabbar;
 
+- (void)addTabbar;
+
+@property(nonatomic,strong) NSString *str;
 
 @end
 

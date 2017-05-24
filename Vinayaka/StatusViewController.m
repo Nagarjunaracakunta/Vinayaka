@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "MyViewController.h"
 #import "HomeViewController.h"
+#import "ViewController.h"
 @interface StatusViewController ()
 
 @end
@@ -33,6 +34,7 @@
     tap.numberOfTapsRequired = 1;
     self.imageview.userInteractionEnabled = YES;
     [self.imageview addGestureRecognizer:tap];
+    _username.text=_user;
 
 }
 -(void)clckImageView
@@ -118,6 +120,25 @@
     
 }
 - (IBAction)share:(id)sender {
+    if (_username.text.length==0)
+    {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"hello" message:@"User name required" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+        
+    }
+    else if (_statusMessage.text.length==0)
+    {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"hello" message:@"statusmessage required" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+        
+    }
+    else if(_statusTitle.text.length == 0)
+    {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"hello" message:@"_statusTitle required" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+    }
+    else{
+
     NSError *error;
     NSManagedObject *object =[NSEntityDescription insertNewObjectForEntityForName:@"Status" inManagedObjectContext:context];
     [object setValue:self.statusMessage.text forKey:@"statusMessage"];
@@ -135,16 +156,20 @@
     
     
     [self ReceivethUserData];
-    MyViewController *my = [self.storyboard instantiateViewControllerWithIdentifier:@"MyViewController"];
-    my.result = resultArray;
-    [self.navigationController pushViewController:my animated:nil];
-
+    
+    appObj.tabbar.selectedIndex = 1;
+//    MyViewController *my = [self.storyboard instantiateViewControllerWithIdentifier:@"MyViewController"];
+//    my.result = resultArray;
+//    [self.navigationController pushViewController:my animated:nil];
+    }
 }
 
 - (IBAction)cancel:(id)sender {
-    HomeViewController *home = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-    home.result = resultArray;
-    [self.navigationController pushViewController:home animated:nil];
+    ViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    [self.navigationController pushViewController:view animated:nil];
+  //  HomeViewController *home = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+//    home.result = resultArray;
+//    [self.navigationController pushViewController:home animated:nil];
     
     
 }

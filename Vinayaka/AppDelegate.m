@@ -7,20 +7,60 @@
 //
 
 #import "AppDelegate.h"
-
+#import "StatusViewController.h"
+#import "MyViewController.h"
+#import "HomeViewController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+{
+    UIStoryboard *storyBoard;
+}
+@synthesize tabbar = _tabbar;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
 }
 
-
+-(void)addTabbar
+{
+    
+    storyBoard =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    StatusViewController *first =[storyBoard instantiateViewControllerWithIdentifier:@"StatusViewController"];
+    MyViewController *second =[storyBoard instantiateViewControllerWithIdentifier:@"MyViewController"];
+    HomeViewController *third = [storyBoard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    first.user=_str;
+    second.user=_str;
+    
+    _tabbar =[[UITabBarController alloc]init];
+    
+    first.tabBarItem.title =@"First";
+    second.tabBarItem.title =@"Second";
+    third.tabBarItem.title=@"third";
+    NSArray *array= [[NSArray alloc]initWithObjects:first,second,third, nil];
+    [_tabbar setViewControllers:array];
+    self.window.rootViewController = _tabbar;
+    
+    
+    
+    //    NSLog(@"1");
+    //    FirstViewController *user=[[FirstViewController alloc]init];
+    //    SecondViewController *all=[[SecondViewController alloc]init];
+    // user.tabBarItem.title=@"first";
+    // all.tabBarItem.title=@"second";
+    
+    //   NSArray *aArray = [NSArray arrayWithObjects:user,all,nil];
+    //  self.tabbar=[[UITabBarController alloc]init];
+    
+    //  [_tabbar setViewControllers:aArray];
+    // self.window.rootViewController = _tabbar;
+    
+    [self.window makeKeyAndVisible];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

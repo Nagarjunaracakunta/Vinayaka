@@ -153,6 +153,30 @@
 }
 
 - (IBAction)save:(id)sender {
+    if (_username.text.length==0)
+    {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"hello" message:@"User name required" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+        
+    }
+    else if (_firstname.text.length==0)
+    {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"hello" message:@"First name required" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+        
+    }
+    else if(_password.text.length == 0)
+    {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"hello" message:@"Password required" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+    }
+    else if(_email.text.length == 0)
+    {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"hello" message:@"email required" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+    }
+    else{
+
     NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"Users" inManagedObjectContext:context];
     
     [object setValue:self.firstname.text forKey:@"firstname"];
@@ -173,6 +197,7 @@
     UsersListViewController *list = [self.storyboard instantiateViewControllerWithIdentifier:@"UsersListViewController"];
     list.result = resultArray;
     [self.navigationController pushViewController:list animated:nil];
+    }
     
 }
 @end

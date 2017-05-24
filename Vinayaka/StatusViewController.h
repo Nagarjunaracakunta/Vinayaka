@@ -16,4 +16,5 @@
 - (IBAction)share:(id)sender;
 - (IBAction)cancel:(id)sender;
 
+@property(nonatomic,strong) NSString *user;
 @end

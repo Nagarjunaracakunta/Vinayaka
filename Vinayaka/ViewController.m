@@ -61,9 +61,12 @@
         NSLog(@"%@",resultArray);
         if(resultArray.count > 0)
         {
-        StatusViewController *status = [self.storyboard instantiateViewControllerWithIdentifier:@"StatusViewController"];
-        
-        [self.navigationController pushViewController:status animated:nil];
+//        StatusViewController *status = [self.storyboard instantiateViewControllerWithIdentifier:@"StatusViewController"];
+//        
+//        [self.navigationController pushViewController:status animated:nil];
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            appObj.str = _username.text;
+            [appDelegate addTabbar];
         }
     }
 }

@@ -8,16 +8,27 @@
 
 #import "HomeViewController.h"
 #import "StatusTableCell.h"
+#import "AppDelegate.h"
 @interface HomeViewController ()
 
 @end
 
 @implementation HomeViewController
-
+{
+    AppDelegate *appObj;
+    NSManagedObjectContext * context;
+    NSArray *result;
+    
+}
+@synthesize result = _result;
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];NSError *error;
+    appObj = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    context = appObj.persistentContainer.viewContext;
+    NSFetchRequest * request =[[NSFetchRequest alloc]initWithEntityName:@"Status" ];
+    result= [context executeFetchRequest:request error:&error];
     // Do any additional setup after loading the view.
-    NSLog(@"%@",_result);
+    NSLog(@"%@",result);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,7 +38,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return [_result count];
+    return [result count];
     
     
 }
@@ -46,12 +57,12 @@
         cell = [nib objectAtIndex:0];
     }
     
-    NSData * data =[[_result valueForKey:@"imageview"] objectAtIndex:indexPath.row];
+    NSData * data =[[result valueForKey:@"imageview"] objectAtIndex:indexPath.row];
     
-    cell.username.text = [[_result valueForKey:@"username"] objectAtIndex:indexPath.row];
+    cell.username.text = [[result valueForKey:@"username"] objectAtIndex:indexPath.row];
     cell.imageview.image = [UIImage imageWithData:data];
-    cell.statusTitle.text = [[_result valueForKey:@"statusTitle"] objectAtIndex:indexPath.row];
-    cell.statusMessage.text = [[_result valueForKey:@"statusMessage"] objectAtIndex:indexPath.row];
+    cell.statusTitle.text = [[result valueForKey:@"statusTitle"] objectAtIndex:indexPath.row];
+    cell.statusMessage.text = [[result valueForKey:@"statusMessage"] objectAtIndex:indexPath.row];
     
     return cell;
 }
