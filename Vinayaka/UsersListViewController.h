@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UsersListViewController : UIViewController
+@interface UsersListViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @property (nonatomic, strong) NSArray *result;

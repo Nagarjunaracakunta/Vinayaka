@@ -10,4 +10,11 @@
 
 @interface UsersDetailsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *username;
+@property (nonatomic, strong) NSArray *finalresult;
+@property (weak, nonatomic) IBOutlet UILabel *firstname;
+@property (weak, nonatomic) IBOutlet UIImageView *imageview;
+@property (weak, nonatomic) IBOutlet UILabel *email;
+- (IBAction)update:(id)sender;
+- (IBAction)del:(id)sender;
 @end

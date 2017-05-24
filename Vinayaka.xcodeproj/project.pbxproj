@@ -20,8 +20,8 @@
 		7B09B37F1ED56EA100631822 /* UsersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B37E1ED56EA100631822 /* UsersListViewController.m */; };
 		7B09B3831ED56EF200631822 /* UsersDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B3821ED56EF200631822 /* UsersDetailsViewController.m */; };
 		7B09B3871ED5713400631822 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B3861ED5713400631822 /* SimpleTableCell.m */; };
-		7B09B38D1ED57B8700631822 /* Users+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B38A1ED57B8700631822 /* Users+CoreDataClass.m */; };
-		7B09B38E1ED57B8700631822 /* Users+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B38C1ED57B8700631822 /* Users+CoreDataProperties.m */; };
+		7B09B3931ED58EB800631822 /* Users+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B3901ED58EB800631822 /* Users+CoreDataClass.m */; };
+		7B09B3941ED58EB800631822 /* Users+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B3921ED58EB800631822 /* Users+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +67,10 @@
 		7B09B3821ED56EF200631822 /* UsersDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersDetailsViewController.m; sourceTree = "<group>"; };
 		7B09B3851ED5713400631822 /* SimpleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
 		7B09B3861ED5713400631822 /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
-		7B09B3891ED57B8700631822 /* Users+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Users+CoreDataClass.h"; sourceTree = "<group>"; };
-		7B09B38A1ED57B8700631822 /* Users+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Users+CoreDataClass.m"; sourceTree = "<group>"; };
-		7B09B38B1ED57B8700631822 /* Users+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Users+CoreDataProperties.h"; sourceTree = "<group>"; };
-		7B09B38C1ED57B8700631822 /* Users+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Users+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7B09B38F1ED58EB800631822 /* Users+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Users+CoreDataClass.h"; sourceTree = "<group>"; };
+		7B09B3901ED58EB800631822 /* Users+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Users+CoreDataClass.m"; sourceTree = "<group>"; };
+		7B09B3911ED58EB800631822 /* Users+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Users+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7B09B3921ED58EB800631822 /* Users+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Users+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,10 @@
 		7B09B3361ED558B300631822 = {
 			isa = PBXGroup;
 			children = (
-				7B09B3891ED57B8700631822 /* Users+CoreDataClass.h */,
-				7B09B38A1ED57B8700631822 /* Users+CoreDataClass.m */,
-				7B09B38B1ED57B8700631822 /* Users+CoreDataProperties.h */,
-				7B09B38C1ED57B8700631822 /* Users+CoreDataProperties.m */,
+				7B09B38F1ED58EB800631822 /* Users+CoreDataClass.h */,
+				7B09B3901ED58EB800631822 /* Users+CoreDataClass.m */,
+				7B09B3911ED58EB800631822 /* Users+CoreDataProperties.h */,
+				7B09B3921ED58EB800631822 /* Users+CoreDataProperties.m */,
 				7B09B3411ED558B300631822 /* Vinayaka */,
 				7B09B35E1ED558B300631822 /* VinayakaTests */,
 				7B09B3691ED558B300631822 /* VinayakaUITests */,
@@ -352,9 +352,9 @@
 			files = (
 				7B09B34A1ED558B300631822 /* ViewController.m in Sources */,
 				7B09B37B1ED56E4200631822 /* SignUpViewController.m in Sources */,
-				7B09B38D1ED57B8700631822 /* Users+CoreDataClass.m in Sources */,
+				7B09B3931ED58EB800631822 /* Users+CoreDataClass.m in Sources */,
 				7B09B3501ED558B300631822 /* Vinayaka.xcdatamodeld in Sources */,
-				7B09B38E1ED57B8700631822 /* Users+CoreDataProperties.m in Sources */,
+				7B09B3941ED58EB800631822 /* Users+CoreDataProperties.m in Sources */,
 				7B09B3471ED558B300631822 /* AppDelegate.m in Sources */,
 				7B09B3441ED558B300631822 /* main.m in Sources */,
 				7B09B37F1ED56EA100631822 /* UsersListViewController.m in Sources */,

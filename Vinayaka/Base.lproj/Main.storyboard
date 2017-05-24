@@ -113,7 +113,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw7-V9-qlm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw7-V9-qlm">
                                 <rect key="frame" x="60" y="53" width="255" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -186,12 +186,22 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEO-Jn-dmE">
                                         <rect key="frame" x="0.0" y="510" width="147.5" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.77699620879999998" blue="0.73347925709999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Delete">
+                                            <color key="titleColor" red="1" green="0.057165673280000003" blue="0.1379004157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="del:" destination="i4M-to-oKh" eventType="touchUpInside" id="Mvg-Hv-tP8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUA-mK-kdJ">
                                         <rect key="frame" x="195.5" y="510" width="147.5" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.77699620879999998" blue="0.73347925709999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Update">
+                                            <color key="titleColor" red="1" green="0.057165673280000003" blue="0.1379004157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="update:" destination="i4M-to-oKh" eventType="touchUpInside" id="fqi-V8-2tQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,6 +251,12 @@
                             <constraint firstItem="CIV-gs-2eP" firstAttribute="top" secondItem="cdV-mG-xih" secondAttribute="bottom" constant="20" id="zQ4-dd-NfT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="pu3-77-sg7" id="9zU-ym-aiW"/>
+                        <outlet property="firstname" destination="yin-aq-o0P" id="Z6A-QP-vsA"/>
+                        <outlet property="imageview" destination="PJb-no-raE" id="eD3-oK-Wmv"/>
+                        <outlet property="username" destination="ftd-m2-WEX" id="uh8-y1-xgb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Phj-6w-oOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,6 +419,7 @@
                         <outlet property="firstname" destination="OVh-Dq-B3h" id="60e-kX-kHT"/>
                         <outlet property="imageview" destination="vCF-rn-b0A" id="GQr-qD-yFe"/>
                         <outlet property="password" destination="uvS-wf-jLs" id="GR4-fY-YUg"/>
+                        <outlet property="save" destination="c2U-c0-y0F" id="bhm-wm-nNB"/>
                         <outlet property="username" destination="zzd-QJ-o0V" id="RvC-gA-nwL"/>
                     </connections>
                 </viewController>

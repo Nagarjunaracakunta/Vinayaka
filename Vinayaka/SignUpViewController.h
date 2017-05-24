@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UIImageView *imageview;
+
+@property (nonatomic, retain) IBOutlet UIButton *save;
+@property (weak, nonatomic) NSString* str;
+@property (nonatomic, strong) NSArray *result;
 - (IBAction)cancel:(id)sender;
 
 - (IBAction)save:(id)sender;

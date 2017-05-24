@@ -8,15 +8,23 @@
 
 #import "ViewController.h"
 #import "SignUpViewController.h"
-
+#import "AppDelegate.h"
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+{
+    AppDelegate *appObj;
+    NSManagedObjectContext *context;
+    NSArray *resultArray;
+}
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad]; appObj = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    context = appObj.persistentContainer.viewContext;
+    resultArray = [[NSArray alloc]init];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,9 +36,35 @@
 
 
 - (IBAction)signin:(id)sender {
-    SignUpViewController *signup = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewController"];
-    
-    [self.navigationController pushViewController:signup animated:nil];
+    if (_username.text.length==0)
+    {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"hello" message:@"User name required" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+        
+    }
+    else if(_password.text.length == 0)
+    {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"hello" message:@"Password required" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alert show];
+    }
+    else{
+        
+        NSFetchRequest *request= [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Users" inManagedObjectContext:context];
+        NSPredicate *predicate =[NSPredicate predicateWithFormat:@"username==%@ AND password==%@",_username.text, _password.text];
+        [request setEntity:entity];
+        [request setPredicate:predicate];
+        NSError *error;
+        resultArray= [context executeFetchRequest:request error:&error];
+        
+        NSLog(@"%@",resultArray);
+        if(resultArray.count > 0)
+        {
+        SignUpViewController *signup = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+        
+        [self.navigationController pushViewController:signup animated:nil];
+        }
+    }
 }
 
 - (IBAction)signup:(id)sender {
