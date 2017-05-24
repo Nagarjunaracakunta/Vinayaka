@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SignUpViewController.h"
 #import "AppDelegate.h"
+#import "StatusViewController.h"
 @interface ViewController ()
 
 @end
@@ -60,9 +61,9 @@
         NSLog(@"%@",resultArray);
         if(resultArray.count > 0)
         {
-        SignUpViewController *signup = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+        StatusViewController *status = [self.storyboard instantiateViewControllerWithIdentifier:@"StatusViewController"];
         
-        [self.navigationController pushViewController:signup animated:nil];
+        [self.navigationController pushViewController:status animated:nil];
         }
     }
 }
