@@ -16,6 +16,12 @@
 		7B09B3551ED558B300631822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B09B3531ED558B300631822 /* LaunchScreen.storyboard */; };
 		7B09B3601ED558B300631822 /* VinayakaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B35F1ED558B300631822 /* VinayakaTests.m */; };
 		7B09B36B1ED558B300631822 /* VinayakaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B36A1ED558B300631822 /* VinayakaUITests.m */; };
+		7B09B37B1ED56E4200631822 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B37A1ED56E4200631822 /* SignUpViewController.m */; };
+		7B09B37F1ED56EA100631822 /* UsersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B37E1ED56EA100631822 /* UsersListViewController.m */; };
+		7B09B3831ED56EF200631822 /* UsersDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B3821ED56EF200631822 /* UsersDetailsViewController.m */; };
+		7B09B3871ED5713400631822 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B3861ED5713400631822 /* SimpleTableCell.m */; };
+		7B09B38D1ED57B8700631822 /* Users+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B38A1ED57B8700631822 /* Users+CoreDataClass.m */; };
+		7B09B38E1ED57B8700631822 /* Users+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B38C1ED57B8700631822 /* Users+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,18 @@
 		7B09B3661ED558B300631822 /* VinayakaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinayakaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B09B36A1ED558B300631822 /* VinayakaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VinayakaUITests.m; sourceTree = "<group>"; };
 		7B09B36C1ED558B300631822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B09B3791ED56E4200631822 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		7B09B37A1ED56E4200631822 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		7B09B37D1ED56EA100631822 /* UsersListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersListViewController.h; sourceTree = "<group>"; };
+		7B09B37E1ED56EA100631822 /* UsersListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersListViewController.m; sourceTree = "<group>"; };
+		7B09B3811ED56EF200631822 /* UsersDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersDetailsViewController.h; sourceTree = "<group>"; };
+		7B09B3821ED56EF200631822 /* UsersDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersDetailsViewController.m; sourceTree = "<group>"; };
+		7B09B3851ED5713400631822 /* SimpleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
+		7B09B3861ED5713400631822 /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
+		7B09B3891ED57B8700631822 /* Users+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Users+CoreDataClass.h"; sourceTree = "<group>"; };
+		7B09B38A1ED57B8700631822 /* Users+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Users+CoreDataClass.m"; sourceTree = "<group>"; };
+		7B09B38B1ED57B8700631822 /* Users+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Users+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7B09B38C1ED57B8700631822 /* Users+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Users+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,10 @@
 		7B09B3361ED558B300631822 = {
 			isa = PBXGroup;
 			children = (
+				7B09B3891ED57B8700631822 /* Users+CoreDataClass.h */,
+				7B09B38A1ED57B8700631822 /* Users+CoreDataClass.m */,
+				7B09B38B1ED57B8700631822 /* Users+CoreDataProperties.h */,
+				7B09B38C1ED57B8700631822 /* Users+CoreDataProperties.m */,
 				7B09B3411ED558B300631822 /* Vinayaka */,
 				7B09B35E1ED558B300631822 /* VinayakaTests */,
 				7B09B3691ED558B300631822 /* VinayakaUITests */,
@@ -105,9 +127,12 @@
 			children = (
 				7B09B3451ED558B300631822 /* AppDelegate.h */,
 				7B09B3461ED558B300631822 /* AppDelegate.m */,
-				7B09B3481ED558B300631822 /* ViewController.h */,
-				7B09B3491ED558B300631822 /* ViewController.m */,
+				7B09B3841ED56F0800631822 /* UsersDetailsViewControllers */,
+				7B09B3781ED56DF400631822 /* LoginViewControllers */,
 				7B09B34B1ED558B300631822 /* Main.storyboard */,
+				7B09B3881ED5714600631822 /* SimpleTableCell */,
+				7B09B3801ED56EB300631822 /* UsersListViewControllers */,
+				7B09B37C1ED56E4E00631822 /* SignUpViewControllers */,
 				7B09B3511ED558B300631822 /* Assets.xcassets */,
 				7B09B3531ED558B300631822 /* LaunchScreen.storyboard */,
 				7B09B3561ED558B300631822 /* Info.plist */,
@@ -141,6 +166,52 @@
 				7B09B36C1ED558B300631822 /* Info.plist */,
 			);
 			path = VinayakaUITests;
+			sourceTree = "<group>";
+		};
+		7B09B3781ED56DF400631822 /* LoginViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B09B3481ED558B300631822 /* ViewController.h */,
+				7B09B3491ED558B300631822 /* ViewController.m */,
+			);
+			name = LoginViewControllers;
+			sourceTree = "<group>";
+		};
+		7B09B37C1ED56E4E00631822 /* SignUpViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B09B3791ED56E4200631822 /* SignUpViewController.h */,
+				7B09B37A1ED56E4200631822 /* SignUpViewController.m */,
+			);
+			name = SignUpViewControllers;
+			sourceTree = "<group>";
+		};
+		7B09B3801ED56EB300631822 /* UsersListViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B09B37D1ED56EA100631822 /* UsersListViewController.h */,
+				7B09B37E1ED56EA100631822 /* UsersListViewController.m */,
+			);
+			name = UsersListViewControllers;
+			sourceTree = "<group>";
+		};
+		7B09B3841ED56F0800631822 /* UsersDetailsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B09B3811ED56EF200631822 /* UsersDetailsViewController.h */,
+				7B09B3821ED56EF200631822 /* UsersDetailsViewController.m */,
+			);
+			name = UsersDetailsViewControllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7B09B3881ED5714600631822 /* SimpleTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B09B3851ED5713400631822 /* SimpleTableCell.h */,
+				7B09B3861ED5713400631822 /* SimpleTableCell.m */,
+			);
+			name = SimpleTableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,9 +351,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B09B34A1ED558B300631822 /* ViewController.m in Sources */,
+				7B09B37B1ED56E4200631822 /* SignUpViewController.m in Sources */,
+				7B09B38D1ED57B8700631822 /* Users+CoreDataClass.m in Sources */,
 				7B09B3501ED558B300631822 /* Vinayaka.xcdatamodeld in Sources */,
+				7B09B38E1ED57B8700631822 /* Users+CoreDataProperties.m in Sources */,
 				7B09B3471ED558B300631822 /* AppDelegate.m in Sources */,
 				7B09B3441ED558B300631822 /* main.m in Sources */,
+				7B09B37F1ED56EA100631822 /* UsersListViewController.m in Sources */,
+				7B09B3871ED5713400631822 /* SimpleTableCell.m in Sources */,
+				7B09B3831ED56EF200631822 /* UsersDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

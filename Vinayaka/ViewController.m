@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SignUpViewController.h"
 
 @interface ViewController ()
 
@@ -26,4 +27,16 @@
 }
 
 
+- (IBAction)signin:(id)sender {
+    SignUpViewController *signup = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+    
+    [self.navigationController pushViewController:signup animated:nil];
+}
+
+- (IBAction)signup:(id)sender {
+    SignUpViewController *signup = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+    
+    [self.navigationController pushViewController:signup animated:nil];
+    
+}
 @end
